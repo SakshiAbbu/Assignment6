@@ -1,0 +1,13 @@
+pipeline {
+    agent any
+    environment{
+    var1="test_password"
+}
+    stages {
+        stage('environment') {
+            steps {
+                bat "echo 'Test password is  $var1'"
+            }
+        }
+    }
+}
